@@ -6,6 +6,10 @@ class TransaksiController extends BaseController
 {
     public function index(): string
     {
-        return view('v_keranjang');
+        $data = [
+            'title' => 'Data Transaksi',
+            'menu'  => 'transaksi',
+        ];
+        return view('v_keranjang', $data);
     }
 }

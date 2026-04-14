@@ -6,6 +6,11 @@ class ProdukController extends BaseController
 {
     public function index(): string
     {
-        return view('v_produk');
+        $data = [
+            'title'   => 'Daftar Produk',
+            'menu'    => 'produk',
+            'submenu' => 'list',
+        ];
+        return view('v_produk', $data);
     }
 }

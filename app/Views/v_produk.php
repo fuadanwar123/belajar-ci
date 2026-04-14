@@ -1,12 +1,44 @@
-<!doctype html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Produk</title>
-</head>
-<body>
-    <h1>Halaman Produk</h1>
-    <p>Ini adalah halaman produk.</p>
-    <p><a href="/">Kembali ke beranda</a></p>
-</body>
-</html>
+<?= $this->extend('layout') ?>
+
+<?= $this->section('content') ?>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Daftar Produk</h5>
+        <p>Ini adalah halaman daftar produk.</p>
+        <div class="mb-3">
+          <a href="<?= base_url('produk/tambah') ?>" class="btn btn-primary">Tambah Produk</a>
+        </div>
+        
+        <!-- Table with stripped rows -->
+        <table class="table datatable">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nama Produk</th>
+              <th scope="col">Harga</th>
+              <th scope="col">Stok</th>
+              <th scope="col">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Produk 1</td>
+              <td>Rp 100.000</td>
+              <td>10</td>
+              <td>
+                <a href="#" class="btn btn-sm btn-info">Edit</a>
+                <a href="#" class="btn btn-sm btn-danger">Hapus</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?= $this->endSection() ?>
