@@ -5,8 +5,8 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1><?= isset($title) ? $title : 'Dashboard' ?></h1>
-    <nav>
+    <h1><?= isset($title) ? esc($title) : 'Dashboard' ?></h1>
+    <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
         <?php if (isset($breadcrumb)) : ?>

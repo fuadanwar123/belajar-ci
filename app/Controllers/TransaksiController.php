@@ -7,8 +7,9 @@ class TransaksiController extends BaseController
     public function index(): string
     {
         $data = [
-            'title' => 'Data Transaksi',
-            'menu'  => 'transaksi',
+            'title'      => $this->generateTitle(),
+            'menu'       => 'transaksi',
+            'breadcrumb' => $this->generateBreadcrumb(),
         ];
         return view('v_keranjang', $data);
     }

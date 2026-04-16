@@ -10,7 +10,8 @@
         <p>Daftar semua transaksi yang telah dilakukan.</p>
         
         <!-- Table with stripped rows -->
-        <table class="table datatable">
+        <div class="table-responsive">
+          <table class="table datatable table-striped">
           <thead>
             <tr>
               <th scope="col">#</th>

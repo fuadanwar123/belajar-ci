@@ -34,12 +34,50 @@ abstract class BaseController extends Controller
     {
         // Load here all helpers you want to be available in your controllers that extend BaseController.
         // Caution: Do not put the this below the parent::initController() call below.
-        // $this->helpers = ['form', 'url'];
+        helper(['form', 'url']);
 
         // Caution: Do not edit this line.
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
         // $this->session = service('session');
+    }
+
+    protected function generateTitle()
+    {
+        $uri = uri_string();
+        if (empty($uri) || $uri == '/') {
+            return 'Dashboard';
+        }
+        return url_title($uri, ' ', true);
+    }
+
+    protected function generateBreadcrumb()
+    {
+        $uri = uri_string();
+        if (empty($uri) || $uri == '/') {
+            return [['title' => 'Dashboard', 'active' => true]];
+        }
+
+        $segments = explode('/', $uri);
+        $breadcrumb = [];
+        $url = '';
+
+        foreach ($segments as $segment) {
+            if (!empty($segment)) {
+                $url .= '/' . $segment;
+                $breadcrumb[] = [
+                    'title' => url_title($segment, ' ', true),
+                    'url' => base_url($url),
+                ];
+            }
+        }
+
+        if (!empty($breadcrumb)) {
+            $breadcrumb[count($breadcrumb) - 1]['active'] = true;
+            unset($breadcrumb[count($breadcrumb) - 1]['url']);
+        }
+
+        return $breadcrumb;
     }
 }

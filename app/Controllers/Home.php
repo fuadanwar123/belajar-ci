@@ -7,8 +7,9 @@ class Home extends BaseController
     public function index(): string
     {
         $data = [
-            'title'  => 'Dashboard',
-            'menu'   => 'home',
+            'title'      => $this->generateTitle(),
+            'menu'       => 'home',
+            'breadcrumb' => $this->generateBreadcrumb(),
         ];
         return view('v_home', $data);
     }
