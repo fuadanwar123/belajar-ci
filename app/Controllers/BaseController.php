@@ -47,7 +47,7 @@ abstract class BaseController extends Controller
     {
         $uri = uri_string();
         if (empty($uri) || $uri == '/') {
-            return 'Dashboard';
+            return 'Dashboard Overview';
         }
         return url_title($uri, ' ', true);
     }
@@ -56,7 +56,10 @@ abstract class BaseController extends Controller
     {
         $uri = uri_string();
         if (empty($uri) || $uri == '/') {
-            return [['title' => 'Dashboard', 'active' => true]];
+            return [
+                ['title' => 'Home', 'url' => base_url()],
+                ['title' => 'Overview', 'active' => true],
+            ];
         }
 
         $segments = explode('/', $uri);

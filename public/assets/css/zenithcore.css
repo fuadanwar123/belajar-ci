@@ -1,0 +1,187 @@
+/* Custom styles for ZenithCore theme - Light Theme */
+
+:root {
+  --primary-color: #4154f1;
+  --primary-light: #f6f9ff;
+  --dark-color: #012970;
+  --text-color: #444444;
+  --border-color: #ebeef4;
+}
+
+body {
+  background-color: #f6f9ff;
+  color: #444444;
+}
+
+.header {
+  background-color: #fff;
+}
+
+.logo span {
+  color: #012970;
+}
+
+/* Info Card Styles */
+.dashboard .info-card {
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+}
+
+.dashboard .info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 40px rgba(1, 41, 112, 0.15);
+}
+
+.dashboard .info-card .card-body {
+  padding: 20px;
+}
+
+.dashboard .info-card h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #012970;
+  margin-bottom: 15px;
+}
+
+.dashboard .info-card h6 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #012970;
+  margin-bottom: 5px;
+}
+
+.dashboard .info-card p {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.dashboard .info-card .btn {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Sales Card */
+.dashboard .sales-card {
+  background: linear-gradient(135deg, rgba(65, 84, 241, 0.05) 0%, rgba(65, 84, 241, 0) 100%);
+}
+
+.dashboard .sales-card h5 {
+  color: #4154f1;
+}
+
+/* Revenue Card */
+.dashboard .revenue-card {
+  background: linear-gradient(135deg, rgba(46, 202, 106, 0.05) 0%, rgba(46, 202, 106, 0) 100%);
+}
+
+.dashboard .revenue-card h5 {
+  color: #2eca6a;
+}
+
+/* Customers Card */
+.dashboard .customers-card {
+  background: linear-gradient(135deg, rgba(255, 119, 29, 0.05) 0%, rgba(255, 119, 29, 0) 100%);
+}
+
+.dashboard .customers-card h5 {
+  color: #ff771d;
+}
+
+/* Custom button styling */
+.btn-primary {
+  background-color: #4154f1;
+  border-color: #4154f1;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #5969f3;
+  border-color: #5969f3;
+  box-shadow: 0 4px 12px rgba(65, 84, 241, 0.4);
+}
+
+.btn-primary:active {
+  background-color: #3136c5;
+  border-color: #3136c5;
+}
+
+/* Sidebar enhancement */
+.sidebar {
+  background-color: #fff;
+}
+
+.sidebar-nav .nav-link {
+  color: #4154f1;
+  background: #f6f9ff;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav .nav-link:hover {
+  background: #eef2ff;
+  color: #4154f1;
+}
+
+.sidebar-nav .nav-link.collapsed {
+  color: #012970;
+  background: #fff;
+}
+
+/* Card enhancements */
+.card {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0px 5px 40px rgba(1, 41, 112, 0.15);
+}
+
+/* Breadcrumb styling */
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Dashboard section */
+.dashboard {
+  padding: 20px 0;
+}
+
+.dashboard .row {
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #d4af37;
+    border-color: #d4af37;
+    color: #1a1a1a;
+}
+
+.btn-primary:hover {
+    background-color: #b87333;
+    border-color: #b87333;
+}
+
+.footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c1810 100%);
+    border-top: 2px solid #b87333;
+    color: #e0e0e0;
+}
+
+.copyright {
+    color: #d4af37;
+}
+
+.credits {
+    color: #b87333;
+}
