@@ -21,12 +21,12 @@
   <div class="col-xxl-4 col-md-6">
     <div class="card info-card revenue-card">
       <div class="card-body">
-        <h5 class="card-title">Transaksi</h5>
+        <h5 class="card-title">Keranjang</h5>
         <div class="d-flex align-items-center">
           <div class="ps-3">
-            <h6>Data Transaksi</h6>
-            <p>Periksa riwayat transaksi pembelian.</p>
-            <a href="<?= base_url('transaksi') ?>" class="btn btn-sm btn-primary">Lihat Transaksi</a>
+            <h6>Keranjang Belanja</h6>
+            <p>Lihat data item yang sedang ada di keranjang.</p>
+            <a href="<?= base_url('keranjang') ?>" class="btn btn-sm btn-primary">Lihat Keranjang</a>
           </div>
         </div>
       </div>
