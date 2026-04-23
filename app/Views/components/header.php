@@ -191,15 +191,15 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="<?= base_url() ?>NiceAdmin/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Sarah Jones</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?= session()->get('username') ?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg p-3 zenithcore-profile-card">
             <li class="d-flex align-items-center mb-3">
               <img src="<?= base_url() ?>NiceAdmin/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle me-3" width="48" height="48">
               <div>
-                <h6 class="mb-1">Sarah Jones</h6>
-                <p class="mb-0 text-muted">Account: Sarah Jones (Admin)</p>
+                <h6 class="mb-1"><?= session()->get('username') ?></h6>
+                <p class="mb-0 text-muted">Account: <?= session()->get('username') ?> (<?= session()->get('role') ?>)</p>
               </div>
             </li>
             <li class="mb-2">
@@ -209,7 +209,7 @@
               <hr class="dropdown-divider">
             </li>
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="<?= base_url('logout') ?>">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Keluar</span>
               </a>
